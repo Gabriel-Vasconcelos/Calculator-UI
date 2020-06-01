@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Helvetica';
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #091921;
+	/*background-color: white;*/
+
+}
+
+.calculator{
+	position: relative;
+	display: grid;
+
+	border: 1px solid #111;
+	border-radius: 8px 8px 0 0;
+}
+
+.calculator .value{
+	grid-column:span 4;
+	
+	height: 100px;
+	
+	font-size: 18px;
+	text-align: right;
+	
+	outline: none;
+
+	border-radius:8px 8px 0 0;
+	border: none;
+
+	padding: 10px;
+
+}
+
+.calculator span{
+	display: grid;
+
+	width: 60px;
+	height: 60px;
+
+	background-color: #0c2835;
+	color: #fff;
+
+	cursor: pointer;
+
+	place-items:center;
+
+	border: 1px solid rgba(0, 0, 0, 0.1);
+
+	font-size: 19px;
+}
+
+.calculator span:active{
+	background-color: #74ff3b;
+	color: #111;
+
+}
+
+.calculator span.clear{
+	grid-column:span 2;
+
+	width: 120px;
+
+	background-color: #ff3077;
+
+}
+
+.calculator span.plus{
+	grid-row:span 2;
+
+	height: 120px;
+}
+
+.calculator span.equal{
+	background-color: #03b1ff; 
+}
+
+/* Validações */
+
+.register input[type = email]:invalid{
+	border-color: red;
+}
